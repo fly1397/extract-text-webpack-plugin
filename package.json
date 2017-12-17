@@ -9,7 +9,6 @@
     "dist"
   ],
   "scripts": {
-    "webpack-defaults": "webpack-defaults",
     "start": "npm run build -- -w",
     "build": "cross-env NODE_ENV=production babel src -d dist --ignore 'src/**/*.test.js' --copy-files",
     "clean": "del-cli dist",
@@ -29,7 +28,8 @@
     "test:coverage": "jest --collectCoverageFrom='src/**/*.js' --coverage",
     "ci:lint": "npm run lint && npm run security",
     "ci:test": "npm run test -- --runInBand",
-    "ci:coverage": "npm run test:coverage -- --runInBand"
+    "ci:coverage": "npm run test:coverage -- --runInBand",
+    "webpack-defaults": "webpack-defaults"
   },
   "dependencies": {
     "async": "^2.4.1",
@@ -40,7 +40,7 @@
   "devDependencies": {
     "@commitlint/cli": "^5.2.5",
     "@commitlint/config-angular": "^5.1.1",
-    "@webpack-contrib/eslint-config-webpack": "^2.0.1",
+    "@webpack-contrib/eslint-config-webpack": "^2.0.2",
     "babel-cli": "^6.26.0",
     "babel-jest": "^21.2.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
@@ -74,10 +74,13 @@
   "peerDependencies": {
     "webpack": "^3.1.0 || ^4.0.0"
   },
-  "homepage": "http://github.com/webpack-contrib/extract-text-webpack-plugin",
+  "homepage": "https://github.com/webpack-contrib/extract-text-webpack-plugin",
   "repository": {
     "type": "git",
-    "url": "http://github.com/webpack-contrib/extract-text-webpack-plugin.git"
+    "url": "https://github.com/webpack-contrib/extract-text-webpack-plugin"
+  },
+  "bugs": {
+    "url": "https://github.com/webpack-contrib/extract-text-webpack-plugin"
   },
   "pre-commit": "lint-staged",
   "lint-staged": {
